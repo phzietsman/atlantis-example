@@ -1,0 +1,24 @@
+# repos lists the config for specific repos.
+repos:
+
+- id: /.*/
+  # branch is an regex matching pull requests by base branch
+  # (the branch the pull request is getting merged into).
+  # By default, all branches are matched
+  # branch: master
+
+  # apply_requirements sets the Apply Requirements for all repos that match.
+  apply_requirements: [approved]
+
+  # allowed_overrides specifies which keys can be overridden by this repo in
+  # its atlantis.yaml file.
+  allowed_overrides: [workflow]
+
+  # allow_custom_workflows defines whether this repo can define its own
+  # workflows. If false (default), the repo can only use server-side defined
+  # workflows.
+  allow_custom_workflows: true
+
+  # pre_workflow_hooks defines arbitrary list of scripts to execute before workflow execution.
+  pre_workflow_hooks: 
+    - run: eval "echo \"$(cat /Users/paulzietsman/sourcery/atlantis-example/server-config/atlantis_backend.tmpl)\"" > atlantis_backend.tf
