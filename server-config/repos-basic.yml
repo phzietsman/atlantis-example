@@ -21,4 +21,4 @@ repos:
 
   # pre_workflow_hooks defines arbitrary list of scripts to execute before workflow execution.
   pre_workflow_hooks: 
-    - run: eval "echo \"$(cat /Users/paulzietsman/sourcery/atlantis-example/server-config/atlantis_backend.tmpl.tf)\"" > atlantis_backend.tf
+    - run: eval "echo \"$(cat /Users/paulzietsman/sourcery/atlantis-example/server-config/atlantis_backend.tmpl)\"" > atlantis_backend.tf
