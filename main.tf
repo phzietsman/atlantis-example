@@ -21,6 +21,7 @@ resource "aws_ssm_parameter" "atlantis" {
   value = terraform.workspace
 }
 
+
 variable "env" {
     type = string
     default = "default"
